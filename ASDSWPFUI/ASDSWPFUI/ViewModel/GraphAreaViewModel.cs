@@ -9,7 +9,7 @@ namespace ASDSWPFUI.ViewModel
     /// <summary>
     /// The view-model for the main window.
     /// </summary>
-    public class MainWindowViewModel : AbstractModelBase
+    public class GraphAreaViewModel : AbstractModelBase
     {
         #region Internal Data Members
 
@@ -37,12 +37,12 @@ namespace ASDSWPFUI.ViewModel
         ///
         /// The width of the content (in content coordinates).
         /// 
-        private double contentWidth = 1000;
+        private double contentWidth = 4000;
 
         ///
         /// The heigth of the content (in content coordinates).
         /// 
-        private double contentHeight = 1000;
+        private double contentHeight = 2000;
 
         ///
         /// The width of the viewport onto the content (in content coordinates).
@@ -60,7 +60,7 @@ namespace ASDSWPFUI.ViewModel
 
         #endregion Internal Data Members
 
-        public MainWindowViewModel()
+        public GraphAreaViewModel()
         {
             // Add some test data to the view-model.
             PopulateWithTestData();

@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GraphArea\GraphArea.xaml.cs">
+      <DependentUpon>GraphArea.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HelpTextWindow.xaml.cs">
       <DependentUpon>HelpTextWindow.xaml</DependentUpon>
     </Compile>
@@ -69,9 +72,13 @@
     <Compile Include="ViewModel\ConnectionViewModel.cs" />
     <Compile Include="MiscElements\ConnectorType.cs" />
     <Compile Include="ViewModel\ConnectorViewModel.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\GraphAreaViewModel.cs" />
     <Compile Include="ViewModel\NetworkViewModel.cs" />
     <Compile Include="ViewModel\NodeViewModel.cs" />
+    <Page Include="GraphArea\GraphArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HelpText.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -20,11 +20,11 @@ namespace ASDSWPFUI
         /// <summary>
         /// Convenient accessor for the view-model.
         /// </summary>
-        public MainWindowViewModel ViewModel
+        public GraphAreaViewModel ViewModel
         {
             get
             {
-                return (MainWindowViewModel)DataContext;
+                return (GraphAreaViewModel)DataContext;
             }
         }
 
