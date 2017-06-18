@@ -58,7 +58,7 @@
                     <Image 
                         Width="32"
                         Height="32"
-                        Source="Resources/block_16.png"
+                        Source="../Resources/block_16.png"
                         HorizontalAlignment="Right"
                     />
                 </Grid>
@@ -74,7 +74,7 @@
                     <Image 
                         Width="32"
                         Height="32"
-                        Source="Resources/tick_16.png"
+                        Source="../Resources/tick_16.png"
                         HorizontalAlignment="Right"
                     />
                 </Grid>
@@ -505,15 +505,33 @@
 
         <ContextMenu>
 
-            <!-- Clicking this menu item creates a new node. -->
             <MenuItem
-                Header="Create Node"
-                Command="{StaticResource Commands.CreateNode}"
-                ToolTip="Creates a new node"
-            />
-            <Separator />
+                Header="Operations"
+                ToolTip="Add a new operation"
+                >
+                <MenuItem Header="Input Flows" FontStyle="Italic" Foreground="Gray"  IsEnabled="False" />
+                <MenuItem Header="ConstFlow" />
+                <MenuItem Header="StochFlow" />
+                <Separator />
+                <MenuItem Header="Simple operations" FontStyle="Italic" Foreground="Gray" IsEnabled="False" />
+                <MenuItem
+                    Header="Add"
+                    Command="{StaticResource Commands.CreateNode}"
+                    ToolTip="Add flows together"
+                />
+                <MenuItem
+                    Header="Mult"
+                />
+                <MenuItem
+                    Header="Divide"
+                />
+            </MenuItem>
 
+            <Separator />
             <MenuItem
+                Header="Zoom and view"
+                >
+                <MenuItem
                 Header="Fit"
                 Command="{StaticResource Commands.FitContent}"
                 ToolTip="Fit selected nodes to the viewport, when nothing is selected fits all nodes to the viewport"
@@ -545,6 +563,7 @@
                 Command="{StaticResource Commands.ZoomOut}"
                 ToolTip="Zooms in on the canvas"
             />
+            </MenuItem>
 
         </ContextMenu>
     </UserControl.ContextMenu>
