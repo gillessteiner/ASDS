@@ -134,7 +134,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\collapse32.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AdornedControl\AdornedControl.csproj">
       <Project>{94b81cb7-f8a6-44bc-bd71-e927f701e0d8}</Project>
@@ -158,6 +160,12 @@
     <Resource Include="Resources\block_16.png" />
     <Resource Include="Resources\scissors.png" />
     <Resource Include="Resources\tick_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\collapseDouble16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\expand32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

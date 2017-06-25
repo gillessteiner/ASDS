@@ -23,6 +23,11 @@ namespace ASDSWPFUI.ViewModel
         private string name = string.Empty;
 
         /// <summary>
+        /// Appearance of the node in the view
+        /// </summary>
+        private bool isCollapsed = false;
+
+        /// <summary>
         /// The X coordinate for the position of the node.
         /// </summary>
         private double x = 0;
@@ -98,6 +103,21 @@ namespace ASDSWPFUI.ViewModel
                 name = value;
 
                 OnPropertyChanged("Name");
+            }
+        }
+
+        public bool IsCollapsed
+        {
+            get { return isCollapsed; }
+            set
+            {
+                if (isCollapsed == value)
+                {
+                    return;
+                }
+
+                isCollapsed = value;
+                OnPropertyChanged("IsCollapsed");
             }
         }
 
