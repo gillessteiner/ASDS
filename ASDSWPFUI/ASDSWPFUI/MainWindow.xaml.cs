@@ -36,6 +36,8 @@ namespace ASDSWPFUI
             overviewWindow.Owner = this;
             overviewWindow.DataContext = mainGraphArea.ViewModel; // Pass the view model onto the overview window.
             overviewWindow.Show();
+
+            mainGraphArea.zoomAndPanControl.FocusCenter(22);
         }
 
        

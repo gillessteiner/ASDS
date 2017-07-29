@@ -1045,5 +1045,17 @@ namespace ZoomAndPan
         }
 
         #endregion Internal Methods
+
+        // Zoom to a rectangle in the center with dimension = total dim/scaling
+        public void FocusCenter(int scaling =4)
+        {
+            if (scaling <= 1)
+                ZoomTo(new Rect(0, 0, content.ActualWidth, content.ActualHeight));
+            else
+            {
+                double alpha = 0.5 * (1.0 - 1.0 / scaling);
+                ZoomTo(new Rect(alpha * content.ActualWidth, alpha*content.ActualHeight, content.ActualWidth/scaling, content.ActualHeight/scaling));
+            }
+        }
     }
 }

@@ -724,7 +724,7 @@
             />
             <MenuItem
                 Header="Zoom In"
-                Command="{StaticResource Commands.ZoomOut}"
+                Command="{StaticResource Commands.ZoomIn}"
                 ToolTip="Zooms in on the canvas"
             />
             </MenuItem>

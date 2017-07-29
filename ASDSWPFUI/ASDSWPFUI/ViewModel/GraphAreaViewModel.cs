@@ -37,12 +37,12 @@ namespace ASDSWPFUI.ViewModel
         ///
         /// The width of the content (in content coordinates).
         /// 
-        private double contentWidth = 4000;
+        private double contentWidth = 20000;
 
         ///
         /// The heigth of the content (in content coordinates).
         /// 
-        private double contentHeight = 2000;
+        private double contentHeight = 15000;
 
         ///
         /// The width of the viewport onto the content (in content coordinates).
@@ -63,8 +63,8 @@ namespace ASDSWPFUI.ViewModel
         public GraphAreaViewModel()
         {
             // Add some test data to the view-model.
-            PopulateWithTestData();
-        }
+            PopulateWithTestData();            
+         }
 
         /// <summary>
         /// This is the network that is displayed in the window.
@@ -521,8 +521,8 @@ namespace ASDSWPFUI.ViewModel
             //
             // Create some nodes and add them to the view-model.
             //
-            NodeViewModel node1 = CreateNode("Node1", new Point(100, 60), false);
-            NodeViewModel node2 = CreateNode("Node2", new Point(350, 80), false);
+            NodeViewModel node1 = CreateNode("Node1", new Point(9750,  7600), false);
+            NodeViewModel node2 = CreateNode("Node2", new Point(10250, 7400), false);
 
             //
             // Create a connection between the nodes.

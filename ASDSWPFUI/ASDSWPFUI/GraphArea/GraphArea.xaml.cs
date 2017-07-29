@@ -627,6 +627,6 @@ namespace ASDSWPFUI.GraphArea
         {
             prevZoomRectSet = false;
         }
-       }
+    }
 }
 
