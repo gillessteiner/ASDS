@@ -73,15 +73,49 @@ namespace ASDSWPFUI.ViewModel
         /// </summary>
         private bool isSelected = false;
 
+        /// <summary>
+        /// Path to image associated with this node
+        /// </summary>
+        string imagePath;
+
         #endregion Private Data Members
 
         public NodeViewModel()
         {
         }
 
-        public NodeViewModel(string name)
+        public NodeViewModel(string name, MiscUtils.OperationType type)
         {
             this.name = name;
+            this.InputConnectors.Add(new ConnectorViewModel("FlowIn"));
+            this.OutputConnectors.Add(new ConnectorViewModel("FlowOut"));
+
+            switch (type)
+            {
+                case MiscUtils.OperationType.Add:
+                    this.ImgPath = "pack://application:,,,/Resources/add.png";
+                    break;
+                case MiscUtils.OperationType.Mult:
+                    this.ImgPath = "pack://application:,,,/Resources/mult.png";
+                    break;
+                case MiscUtils.OperationType.ConstFlow:
+                    this.ImgPath = "pack://application:,,,/Resources/constFlow.png";
+                    this.ParamConnectors.Add(new ConnectorViewModel("Param1"));
+                    this.ParamConnectors.Add(new ConnectorViewModel("Param2"));
+                    this.ParamConnectors.Add(new ConnectorViewModel("Param3"));
+
+                    break;
+                case MiscUtils.OperationType.StochFlow:
+                    break;
+                case MiscUtils.OperationType.ConstPattern:
+                    break;
+                case MiscUtils.OperationType.ApTiFi:
+                    break;
+                case MiscUtils.OperationType.CaTiFi:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(type), type, null);
+            }
         }
 
         /// <summary>
@@ -327,6 +361,25 @@ namespace ASDSWPFUI.ViewModel
                 isSelected = value;
 
                 OnPropertyChanged("IsSelected");
+            }
+        }
+
+        public string ImgPath
+        {
+            get
+            {
+                return imagePath;
+            }
+            set
+            {
+             if (imagePath == value)
+                {
+                    return;
+                }
+
+                imagePath = value;
+
+                OnPropertyChanged("ImgPath");
             }
         }
 

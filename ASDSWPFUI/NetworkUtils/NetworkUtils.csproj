@@ -84,6 +84,7 @@
     <Compile Include="CollectionItemsChangedEventArgs.cs" />
     <Compile Include="FrameworkElementAdorner.cs" />
     <Compile Include="ImpObservableCollection.cs" />
+    <Compile Include="MiscUtils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WpfUtils.cs" />
   </ItemGroup>

@@ -16,6 +16,7 @@ using System.Windows.Shapes;
 using ASDSWPFUI.MiscElements;
 using ASDSWPFUI.ViewModel;
 using NetworkUI;
+using NetworkUtils;
 using ZoomAndPan;
 
 namespace ASDSWPFUI.GraphArea
@@ -146,8 +147,10 @@ namespace ASDSWPFUI.GraphArea
         private void CreateNode()
         {
             var newNodePosition = Mouse.GetPosition(networkControl);
-            this.ViewModel.CreateNode("New Node!", newNodePosition, true);
+            this.ViewModel.CreateNode("New Node!", newNodePosition, true, MiscUtils.OperationType.Add);
         }
+
+
 
         /// <summary>
         /// Event raised when the size of a node has changed.

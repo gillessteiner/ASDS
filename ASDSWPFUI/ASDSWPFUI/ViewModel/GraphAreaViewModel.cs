@@ -437,19 +437,11 @@ namespace ASDSWPFUI.ViewModel
         /// <summary>
         /// Create a node and add it to the view-model.
         /// </summary>
-        public NodeViewModel CreateNode(string name, Point nodeLocation, bool centerNode)
+        public NodeViewModel CreateNode(string name, Point nodeLocation, bool centerNode, MiscUtils.OperationType opType)
         {
-            var node = new NodeViewModel(name);
+            var node = new NodeViewModel(name, opType);
             node.X = nodeLocation.X;
-            node.Y = nodeLocation.Y;
-
-            node.InputConnectors.Add(new ConnectorViewModel("FlowIn"));
-
-            node.ParamConnectors.Add(new ConnectorViewModel("Param1"));
-            node.ParamConnectors.Add(new ConnectorViewModel("Param2"));
-            node.ParamConnectors.Add(new ConnectorViewModel("Param3"));
-
-            node.OutputConnectors.Add(new ConnectorViewModel("FlowOut"));
+            node.Y = nodeLocation.Y;  
 
             if (centerNode)
             {
@@ -521,8 +513,8 @@ namespace ASDSWPFUI.ViewModel
             //
             // Create some nodes and add them to the view-model.
             //
-            NodeViewModel node1 = CreateNode("Node1", new Point(9750,  7600), false);
-            NodeViewModel node2 = CreateNode("Node2", new Point(10250, 7400), false);
+            NodeViewModel node1 = CreateNode("Node1", new Point(9750,  7600), false, MiscUtils.OperationType.ConstFlow);
+            NodeViewModel node2 = CreateNode("Node2", new Point(10250, 7400), false, MiscUtils.OperationType.Mult);
 
             //
             // Create a connection between the nodes.

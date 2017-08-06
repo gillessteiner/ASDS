@@ -135,6 +135,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\add.png" />
     <Resource Include="Resources\collapse32.png" />
   </ItemGroup>
   <ItemGroup>
@@ -156,7 +157,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\add.png" />
     <Resource Include="Resources\block_16.png" />
     <Resource Include="Resources\scissors.png" />
     <Resource Include="Resources\tick_16.png" />
@@ -166,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\expand32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\mult.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\constFlow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
